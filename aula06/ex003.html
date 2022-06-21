@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: blue;
+            font: normal 20pt Arial;
+        }
+        body{
+            font: normal 10pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Digite seu nome')
+        window.alert(`Bem vindo ${nome.toUpperCase()}`)
+        document.write(`<h1>Este é o documento de ${nome.toUpperCase()}</h1>`)
+        document.writeln(`Olá <strong>${nome.toUpperCase()}</strong>.<br>`)
+        document.writeln(`Seu nome tem ${nome.length} letras`)
+</script>
+</body>
+</html>
