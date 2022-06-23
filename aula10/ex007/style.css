@@ -1,0 +1,19 @@
+body{
+    font: normal 1rem Arial;
+}
+
+input#txtn1, input#txtn2{
+    width: 5rem;
+}
+input.somar{
+    margin-top: 1rem;
+    width: 5rem;
+}
+
+input.somar:hover{
+    cursor: pointer;
+}
+
+div{
+    margin: 1rem;
+}
