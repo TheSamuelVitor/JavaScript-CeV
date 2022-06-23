@@ -17,12 +17,15 @@
     </style>
 </head>
 <body>
-    <h1>Iniciando estudos com DOM</h1>
+    <h1 id="h1">Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
-    <p>Apresentando a usar o <strong><abbr title="Document Object Model">DOM</abbr></strong> em JavaScript</p>
-    <div>
+    <p class="paragrafo">Aprendendo a usar o <strong><abbr title="Document Object Model">DOM</abbr></strong> em JavaScript</p>
+    <div name="msg">
         Clique em mim
     </div>
+    <button>botao1</button>
+    <button>botao2</button>
+    <br>
     <script>
         // DOM = Document Object Model
         // Não funciona apenas no JavaScript
@@ -45,11 +48,38 @@
         //                                _______|_______
         //                               |              | 
         //                             strong          abbr
+        // sempre que o element estiver no plural usa-se o indice
+        // em frente ao indicador
 
-        var p1 = window.document.getElementsByTagName("p")[0]
-        window.document.write("Olá mundo<br>")
-        window.document.write(window.document.charset,"<br>")
-        window.document.write(window.document.URL)
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var corpo = window.document.body
+
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerText = "Olá"
+
+        var titulo = window.document.getElementById('h1')
+        titulo.style.opacity= 0.5
+
+        var paragrafo = window.document.getElementsByClassName('paragrafo')[0]
+        paragrafo.innerText = 'Bem vindo'
+
+        var botao = window.document.querySelectorAll('button')
+        botao.innerText = 'Meu botão'
+
+        var d = window.document.querySelector('div#msg')
+
+        // var p2 = window.document.getElementsByTagName('p')[1]
+        // var d = window.document.getElementById('msg')
+
+        // d.style.backgroundColor='green'
+        // d.innerText = 'Estou aguardando...'
+        // document.write("Está escrito assim '"+p1.innerText+"'<br>")
+        // p2.style.color='blue'
+        // corpo.style.backgroundColor='wine'
+
+        for (let i = 0; i < 5; i++) {
+            document.write(`Loop: i = ${i}<br>`)
+        }
 
     </script>       
 </body>
